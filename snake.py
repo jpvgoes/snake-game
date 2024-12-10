@@ -21,6 +21,13 @@ class Snake:
             self.add_segment((x,0))
             x -= 20
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+
 
     def add_segment(self,position):
         temp = Turtle(shape="square")

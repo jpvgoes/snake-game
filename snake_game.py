@@ -3,20 +3,21 @@ from time import sleep
 from snake import Snake
 from food import Food
 from scoreboard import ScoreBoard
-
+#tela
 screen = Screen()
 screen.setup(600,600)
 screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
+#objetos
 snake = Snake()
 food = Food()
 scoreboard = ScoreBoard()
 
 screen.update()
 
-
+#listeners
 screen.listen()
 screen.onkeypress(snake.up,"Up")
 screen.onkeypress(snake.down,"Down")
@@ -42,14 +43,19 @@ while game_is_on:
 
     #detectar colisão com a parede
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.game_over()
+
+        scoreboard.reset()
+        snake.reset()
+
 
     #detectar colisão com o rabo
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             game_is_on = False
-            scoreboard.game_over()
+
+            scoreboard.reset()
+            snake.reset()
+
 
 
 

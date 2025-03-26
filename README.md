@@ -18,4 +18,11 @@ The Snake game is a simple game where the player controls a snake that moves aro
    ```bash
    git clone https://github.com/jpvgoes/snake-game.git
 
+2. Navigate to the project directory:
+   ```bash
+   cd snake-game
 
+3. Ensure you have Python installed. This game is built using Python 3.
+4. Install the Turtle module if it's not already installed:
+   ```bash
+   pip install PythonTurtle

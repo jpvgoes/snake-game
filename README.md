@@ -26,3 +26,9 @@ The Snake game is a simple game where the player controls a snake that moves aro
 4. Install the Turtle module if it's not already installed:
    ```bash
    pip install PythonTurtle
+
+## Usage
+
+To start the game, run the `snake_game.py` file:
+```bash
+python snake_game.py
